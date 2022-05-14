@@ -15,6 +15,15 @@ class BookRepository {
     "Scala programming language",
     "Development"
   )
+  bookList += Book( 2,
+    "Dollar Babu",
+    "Sudha Murthy",
+    "Adult Book",
+    "Fiction Book"
+
+  )
+
+
 
   def getAllBooks: mutable.Set[Book] = bookList
 
@@ -38,6 +47,6 @@ class BookRepository {
         case b if b.id == book.id => b
       }
     }
-  }
 
-}
+
+}}
