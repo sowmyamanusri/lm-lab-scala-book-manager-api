@@ -22,6 +22,12 @@ class BookRepository {
     "Fiction Book"
 
   )
+  bookList += Book(	3,
+    "Drogon Legend",
+    "Katie and Kevin Tsang",
+    "Fantsy Book",
+    "Kids fiction"
+  )
 
 
 
@@ -47,6 +53,6 @@ class BookRepository {
         case b if b.id == book.id => b
       }
     }
+  }
 
-
-}}
+}

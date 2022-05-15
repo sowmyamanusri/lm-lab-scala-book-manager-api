@@ -19,6 +19,9 @@ class BooksController @Inject()(val controllerComponents: ControllerComponents, 
     dataRepository.getBook(bookId) foreach { book =>
       bookToReturn = book
     }
+    if(bookToReturn eq null){
+      NotFound(Json.toJson("Book not found"))
+    }else
     Ok(Json.toJson(bookToReturn))
   }
 
@@ -37,7 +40,6 @@ class BooksController @Inject()(val controllerComponents: ControllerComponents, 
       val savedBook: Option[Book] = dataRepository.addBook(bookItem.get)
       Created(Json.toJson(savedBook))
     }
-
-
   }
+
 }
